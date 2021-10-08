@@ -31,7 +31,7 @@ export function getIncreasingArray(startNumber, endNumber) {
         c.push(i)
       }
 
-    return `[ ${c} ]`;
+    return c;
 
 }
 
