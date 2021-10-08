@@ -62,7 +62,7 @@ export function maxAndMin(numbers) {
 export function countArray(array) {
     let a = new Object();
     array.forEach(function(item, index) {
-        a[item] = 1;
+        a[item] = array.filter(x => x == item).length;
       })
 
     return a;
