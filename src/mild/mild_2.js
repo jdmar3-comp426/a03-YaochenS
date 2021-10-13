@@ -27,7 +27,7 @@ export function identifyVariable(variable) {
 
  */
 export function identifyArray(array) {
-   const b = [];
+   const b = new Array();
 
    array.forEach(function(item, index) {
       let a = new Object();
