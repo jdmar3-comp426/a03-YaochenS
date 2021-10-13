@@ -7,8 +7,8 @@
  */
 export function identifyVariable(variable) {
    let a = new Object();
-   a[type] = variable;
-   a[value] = typeof variable;
+   a["type"] = variable;
+   a["value"] = typeof variable;
    return a;
 }
 
