@@ -27,13 +27,17 @@ export function identifyVariable(variable) {
 
  */
 export function identifyArray(array) {
-   let a = new Object();
+   const b = [];
 
    array.forEach(function(item, index) {
-      a[typeof item] = item;
+      let a = new Object();
+      a.type = typeof item;
+      a.value = item;
+
+      b[index] = a;
     })
     
-   return a;
+   return b;
 
 }
 
