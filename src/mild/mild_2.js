@@ -27,7 +27,7 @@ export function identifyVariable(variable) {
 
  */
 export function identifyArray(array) {
-   const b = new Array();
+   let b = new Array();
 
    array.forEach(function(item, index) {
       let a = new Object();
@@ -105,16 +105,6 @@ export function removeKeyNonDestructive(object, key) {
  * @return {*} The object with its keys removed.
  */
 export function removeKeys(object, keyList) {
-   let copy =  new Object();
   
-  
-      for (let i = 0; i < keyList.length; i++) {
-         let {[item]:itemv, ...copy2} = copy; 
-         let copy = copy2
-      }
-
  
-
-   return copy;
-
 }
