@@ -79,12 +79,9 @@ export function removeKey(object, key) {
  */
 export function removeKeyNonDestructive(object, key) {
   
-   let {...copy1, key, ...copy2} = object; 
+   let {key, ...copy2} = object; 
 
-   let copy = {
-      ...copy1,
-      ...copy2
-   };
+  
 
   return copy;
 
