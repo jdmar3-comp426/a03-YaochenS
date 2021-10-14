@@ -105,6 +105,7 @@ export function removeKeyNonDestructive(object, key) {
  * @return {*} The object with its keys removed.
  */
 export function removeKeys(object, keyList) {
+   let copy =  new Object();
    let {[keyList[0]]:itemv, ...copy} = object; 
 
    if (keyList.length > 1) {
