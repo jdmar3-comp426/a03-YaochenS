@@ -80,7 +80,7 @@ export function removeKey(object, key) {
 export function removeKeyNonDestructive(object, key) {
    const copy = Object.assign({}, object);
    delete copy[key];
-   return copy; 
+   return copy;
 
 }
 
