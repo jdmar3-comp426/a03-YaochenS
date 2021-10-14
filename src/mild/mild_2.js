@@ -79,7 +79,7 @@ export function removeKey(object, key) {
  */
 export function removeKeyNonDestructive(object, key) {
    let {[key]:keyv, ...copy} = object; 
-   return copy;
+   return object, copy;
 
 }
 
