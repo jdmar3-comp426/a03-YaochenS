@@ -66,6 +66,8 @@ export function getStatistics(array) {
     a.variance = v;
     a.standard_deviation = Math.sqrt(v);
 
+    return a; 
+
 
 
 }
