@@ -86,7 +86,7 @@ export function removeKeyNonDestructive(object, key) {
       ...copy2
   };
 
-  return copy
+  return copy;
 
 }
 
