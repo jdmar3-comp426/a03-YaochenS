@@ -84,7 +84,7 @@ export function removeKeyNonDestructive(object, key) {
    let copy = {
       ...copy1,
       ...copy2
-  };
+   };
 
   return copy;
 
