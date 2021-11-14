@@ -57,7 +57,7 @@ export function getStatistics(array) {
     let a = new Object();
     a.length = array.length;
     a.sum = array.reduce((a, b) => a + b, 0);
-    let mean = getSum(array)/array.length;
+    const mean = getSum(array)/array.length;
     a.mean = mean; 
     a.median = getMedian(array);
     a.min = Math.min(...array);
