@@ -53,22 +53,20 @@ export function getMedian(array) {
   standard_deviation: 1.632993161855452
  }
  */
-export function getStatistics(array) {
+ export function getStatistics(array) {
     let a = new Object();
     a.length = array.length;
     a.sum = array.reduce((a, b) => a + b, 0);
-    const mean = getSum(array)/array.length;
+    let mean = (array.reduce((a, b) => a + b, 0))/array.length;
     a.mean = mean; 
     a.median = getMedian(array);
     a.min = Math.min(...array);
     a.max = Math.max(...array);
-    
+    let v = variance(array, mean);
+    a.variance = v;
+    a.standard_deviation = Math.sqrt(v);
 
-    a[`variance`] = variance(array,mean);
-    a[`standard_deviation`] = Math.sqrt(variance(array,mean));
-
-
-    return a; 
+    return a;
 
 
 
