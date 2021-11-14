@@ -62,9 +62,8 @@ export function getStatistics(array) {
     a.median = getMedian(array);
     a.min = Math.min(...array);
     a.max = Math.max(...array);
-    let v = variance(array, mean);
-    a.variance = v;
-    a.standard_deviation = Math.sqrt(v);
+    a.variance = variance(array, mean);
+    a.standard_deviation = Math.sqrt(variance(array, mean));
 
     return a; 
 
