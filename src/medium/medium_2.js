@@ -15,7 +15,7 @@ see under the methods section
  * @param {allCarStats.avgMpg} Average miles per gallon on the highway and in the city. keys `city` and `highway`
  *
  * @param {allCarStats.allYearStats} The result of calling `getStatistics` from medium_1.js on
- * the years the cars were made.
+ * the years the cars were made. 
  *
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
