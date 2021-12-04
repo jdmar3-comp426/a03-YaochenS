@@ -97,7 +97,7 @@ export const moreStats = {
     },[]).sort((a,b) => a.hybrid.length - b.hybrid.length),
 
     avgMpgByYearAndHybrid: mpg_data.reduce(function(a,b,index){
-        if( a.indexOf(b.year) == -1){       
+        if( !(b.year in a)){       
             if(b.hybrid){
                 a[b.year] = {hybrid:{city:[b.city_mpg], highway:[b.highway_mpg]}, notHybrid:{city:[], highway:[]}};
             }
@@ -115,7 +115,7 @@ export const moreStats = {
                 a[b.year].notHybrid.highway.push(b.highway_mpg);
             }
         }
-        
+
         if(index == mpg_data.length - 1){
             for(const [key, value] of Object.entries(a)){
                 value.hybrid.city = getSum(value.hybrid.city)/value.hybrid.city.length;
