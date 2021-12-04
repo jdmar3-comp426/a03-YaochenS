@@ -95,14 +95,12 @@ export const tenTimesFifty = () => {
  */
 export const everyEven = (arr, test) => {
     let a = true;
-    for(let i = 0; i < n; i+2 ){
+    for(let i = 0; i < a.length; i+2 ){
        if (test(arr[i]) == false) {
            a = false;
        }
     }
     return a;
-
-
 };
 
 
