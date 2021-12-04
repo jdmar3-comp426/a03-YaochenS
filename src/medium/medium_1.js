@@ -64,7 +64,7 @@ export function getMedian(array) {
     a.max = Math.max(...array);
     let v = variance(array, mean);
     a.variance = v;
-    a.standard_deviation = Math.sqrt(v);
+    a.standard_deviation = Math.sqrt(variance(array, mean));
 
     return a;
 
