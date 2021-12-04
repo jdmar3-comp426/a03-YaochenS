@@ -118,10 +118,10 @@ export const moreStats = {
 
         if(index == mpg_data.length - 1){
             for(const [key, value] of Object.entries(a)){
-                value.hybrid.city = getSum(value.hybrid.city)/value.hybrid.city.length;
-                value.hybrid.highway = getSum(value.hybrid.highway)/value.hybrid.highway.length;
-                value.notHybrid.city = getSum(value.notHybrid.city)/value.notHybrid.city.length;
-                value.notHybrid.highway = getSum(value.notHybrid.highway)/value.notHybrid.highway.length;
+                value.hybrid.city = value.hybrid.city.reduce((a, b) => a + b, 0)/value.hybrid.city.length;
+                value.hybrid.highway = value.hybrid.highway.reduce((a, b) => a + b, 0)/value.hybrid.highway.length;
+                value.notHybrid.city = value.notHybrid.city.reduce((a, b) => a + b, 0)/value.notHybrid.city.length;
+                value.notHybrid.highway = value.notHybrid.highway.reduce((a, b) => a + b, 0)/value.notHybrid.highway.length;
             }
         }
         return a;
